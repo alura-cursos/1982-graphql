@@ -7,6 +7,7 @@ const UsersAPI = require('./user/datasource/user')
 
 const turmaSchema = require('./turma/schema/turma.graphql')
 const turmaResolvers = require('./turma/resolvers/turmaResolvers')
+const TurmasAPI = require('./turma/datasource/turma')
 
 const typeDefs = mergeTypeDefs([userSchema, turmaSchema])
 const resolvers = [userResolvers, turmaResolvers]
@@ -16,7 +17,8 @@ const server = new ApolloServer( {
   resolvers,
   dataSources: () => {
     return {
-      usersAPI: new UsersAPI()
+      usersAPI: new UsersAPI(),
+      turmasAPI: new TurmasAPI()
     }
   },
  })
