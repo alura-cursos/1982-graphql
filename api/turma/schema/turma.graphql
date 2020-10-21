@@ -13,9 +13,32 @@ scalar DateTime
     createdAt: DateTime!
   }
 
+    input TurmaInput {
+    descricao: String
+    horario: String
+    vagas: Int
+    inicio: DateTime
+    docente_id: Int
+  }
+
   type Query {
     turmas: [Turma]
     turma (id: ID!): Turma
+  }
+
+  type Mutation {
+  incluiTurma(turma: TurmaInput): Turma!
+  atualizaTurma(id: ID!, turma: TurmaInput): Turma!
+  deletaTurma(id: ID!): RespostaPadrao!
+  
+}
+
+  interface Resposta {
+    mensagem: String!
+  }
+
+  type RespostaPadrao implements Resposta {
+    mensagem: String!
   }
 
 `
