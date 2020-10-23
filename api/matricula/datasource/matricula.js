@@ -32,6 +32,15 @@ class MatriculasAPI extends SQLDataSource {
     console.log(matriculas)
     return matriculas
   }
+
+  async getMatriculasPorEstudante(idEstudante) {
+    const matriculas = await this.db
+      .select('*')
+      .from('matriculas')
+      .where({ estudante_id: idEstudante })
+
+    return matriculas
+  }
 }
 
 module.exports = MatriculasAPI
