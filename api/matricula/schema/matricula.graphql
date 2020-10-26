@@ -13,6 +13,8 @@ scalar DateTime
 
   type Mutation {
     matricularEstudante (estudante: ID!, turma: ID!): RespostaPadrao!
+    deletarMatricula (matricula: ID!): RespostaPadrao!
+    cancelarMatricula (matricula: ID!): RespostaPadrao!
   }
 
 `
