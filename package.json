@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,json,graphql ./api/index.js",
+    "start": "DEBUG=knex:query nodemon -e js,json,graphql ./api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "apollo-datasource": "^0.7.2",
     "apollo-datasource-rest": "^0.9.4",
     "apollo-server": "^2.17.0",
+    "dataloader": "^2.0.0",
     "datasource-sql": "^1.3.0",
     "graphql": "^15.3.0",
     "graphql-tools": "^6.2.4",

@@ -65,6 +65,30 @@
       "role": 2,
       "createdAt": "2020-09-22T00:00:00.000Z",
       "id": 9
+    },
+    {
+      "nome": "Marcos Gomes",
+      "ativo": true,
+      "email": "m@m.com",
+      "role": 1,
+      "createdAt": "2020-08-01T00:00:00.000Z",
+      "id": 10
+    },
+    {
+      "nome": "Aline Ferreira",
+      "ativo": true,
+      "email": "a@a.com",
+      "role": 1,
+      "createdAt": "2020-08-01T00:00:00.000Z",
+      "id": 11
+    },
+    {
+      "nome": "Julia Campos",
+      "ativo": true,
+      "email": "j@j.com",
+      "role": 1,
+      "createdAt": "2020-08-01T00:00:00.000Z",
+      "id": 12
     }
   ],
   "roles": [
