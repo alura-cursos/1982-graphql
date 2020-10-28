@@ -45,18 +45,6 @@ class MatriculasAPI extends SQLDataSource {
           matricula.estudante_id === id))
   })
 
-  // matriculasLoader = new DataLoader(this.getMatriculasPorEstudante.bind(this))
-
-  // async getMatriculasPorEstudante(idsEstudantes) {
-  //   const matriculas = await this.db
-  //     .select('*')
-  //     .from('matriculas')
-  //     .whereIn('estudante_id', idsEstudantes)
-  //     .select()
-
-  //   return idsEstudantes.map(id => matriculas.filter(matricula => matricula.estudante_id === id))
-  // }
-
   async deletarMatricula(idMatricula) {
     await this.db('matriculas')
     .where({ id: Number(idMatricula) })
