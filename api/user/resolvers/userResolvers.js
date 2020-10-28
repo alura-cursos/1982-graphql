@@ -31,7 +31,9 @@ const userResolvers = {
     deletaUser: async (_, { id }, { dataSources }) => dataSources.usersAPI.deletaUser(id)
   },
   User: {
-    matriculas: (parent, _, { dataSources }) => dataSources.matriculasAPI.matriculasLoader.load(parent.id)
+    matriculas: (parent, _, { dataSources }) => 
+      dataSources.matriculasAPI.getMatriculasPorEstudante
+        .load(parent.id)
   } 
 }
 
