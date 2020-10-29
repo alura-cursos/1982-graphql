@@ -10,7 +10,7 @@ const turmaResolvers = {
   }),
 
   Query: {
-    turmas: (_, __, { dataSources }) => dataSources.turmasAPI.getTurmas(),
+    turmas: (_, args, { dataSources }) => dataSources.turmasAPI.getTurmas(args),
     turma: (_, { id }, { dataSources }) => dataSources.turmasAPI.getTurma(id)
   },
 
