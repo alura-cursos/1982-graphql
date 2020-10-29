@@ -10,8 +10,13 @@ class UsersAPI extends RESTDataSource {
     }
   }
 
-  async getUsers() {
-    const users = await this.get('/users')
+  async getUsers({ page = 1, limit = 0 }) {
+
+    const query = limit 
+      ? `/users?_page=${page}&_limit=${limit}`
+      : `/users?_page=${page}`
+
+    const users = await this.get(query)
     return users.map(async user => ({
       id: user.id,
       nome: user.nome,
